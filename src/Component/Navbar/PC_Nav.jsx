@@ -6,6 +6,10 @@ import { NavLink } from "react-router-dom";
 import { FaOpencart } from "react-icons/fa";
 import { Button, Drawer } from 'antd';
 
+import Headphone1 from '../../Assets/products/headphone-prod-2.webp'
+import Headphone2 from '../../Assets/products/headphone-prod-3.webp'
+import { FaIndianRupeeSign } from "react-icons/fa6";
+
 export default function PC_Nav() {
   const [open, setOpen] = useState(false);
 
@@ -90,7 +94,44 @@ export default function PC_Nav() {
       </div>
 
       <Drawer title="Cart Checkout" onClose={onClose} open={open}>
-        
+        <div className=' flex  justify-between flex-col  '>
+
+          <div>
+            <div className=' my-10'>
+              <img className='w-[50px] h-[50px]' src={Headphone1} alt="img-error" />
+              <div className=' flex items-center justify-between '>
+                <h1>Name: Boat RockerZ</h1>
+                <p className=' flex items-center'><FaIndianRupeeSign /> 1900</p>
+              </div>
+              <div className=' flex justify-end items-center '>
+                <button className=' border-2 p-1'>+</button>
+                <p className=' p-1'>0</p>
+                <button className=' border-2 p-1'>-</button>
+              </div>
+            </div>
+
+            <hr />
+            <div className=' my-10'>
+              <img className='w-[50px] h-[50px]' src={Headphone2} alt="img-error" />
+              <div className=' flex items-center justify-between '>
+                <h1>Name: Boat RockerX</h1>
+                <p className=' flex items-center'><FaIndianRupeeSign /> 2100</p>
+              </div>
+
+              <div className=' flex justify-end items-center '>
+                <button className=' border-2 p-1'>+</button>
+                <p className='p-1'>0</p>
+                <button className=' border-2 p-1'>-</button>
+              </div>
+            </div>
+          </div>
+
+          <div className=' flex justify-between items-center'>
+            <hr />
+            <h1>Total</h1>
+            <p className=' text-green-600 font-semibold '>2100</p>
+          </div>
+        </div>
       </Drawer>
     </>
   )
