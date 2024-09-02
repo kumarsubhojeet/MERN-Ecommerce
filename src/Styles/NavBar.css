@@ -1,0 +1,30 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .search-input {
+    width: 0;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: width 0.3s ease;
+    opacity: 0;
+    box-shadow: rgba(51, 230, 243, 0.555) 0px 10px 15px -3px, rgba(118, 16, 235, 0.685) 0px 4px 6px -2px;
+  }
+  
+  .search-input.open {
+    width: 200px;
+    opacity: 1;
+  }
+  
+
